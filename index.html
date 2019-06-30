@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <!-- Content Scaling -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <meta charset="utf-8">
+        <title></title>
+        <!-- 
+        <link rel="stylesheet" href="resets.css">
+        --> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <audio id="wrong">
+            <source src="assets/media/wrong.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="ding">
+              <source src="assets/media/ding.wav" type="audio/wav">
+              Your browser does not support the audio element.
+        </audio>
+        <audio id="tada">
+                <source src="assets/media/tada.wav" type="audio/wav">
+                Your browser does not support the audio element.
+        </audio>
+        <audio id="lost">
+            <source src="assets/media/lost.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="container h-100 align-items-center">
+          <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+
+          <div class="row h-100">
+            
+              <div class="col-md-12 mx-0">
+
+                <h1 id="heading-h1" class="text-center">Crystal Collector!</h1>
+                <p id="instructions"> You will be given random numbers at the start of the game. 
+                There are four crystals below. By clicking on a crystal
+                   you will add a specific amount of points to your total score
+                You win the game by matching your total score to random number
+                   , you loose the game if your total score goes above the random
+                  number.  The value of each crystal is hidden from you until
+                  you click on it. Each time the game start, the game will change
+                 the value of each crystal. 
+                </p>
+
+                <div class="row mx-0">
+                  <div class="col-md-4 mr-3" id="score_div">
+                    <span id="score_span"><strong>Score=39</strong></span>
+                  </div>
+                  <div class="col-md-3" id="stats_div">
+                    <div class="row stats_div">
+                        <div id="wins_div" class="col-md-3">Wins:</div>
+                      </div>
+                      <div class="row stats_div">
+                        <div id="class_div" class="col-md-3">Losses:</div>
+                      </div>
+                  </div>
+                </div>
+
+
+                <div class="row mt-3 mx-0 bg-white">
+                  <div class="col-md-3  ">
+                    <img class=".img-fluid " src="./assets/images/crystal1.jpg" alt="Crystal 1">
+                  </div>
+                  <div class="col-md-3">
+                      <img class=".img-fluid" src="./assets/images/crystal2.jpg" alt="Crystal 2">
+                  </div>
+                  <div class="col-md-3">
+                      <img class=".img-fluid" src="./assets/images/crystal3.jpg" alt="Crystal 3">
+                  </div>
+                  <div class="col-md-3">
+                      <img class=".img-fluid" src="./assets/images/crystal4.jpg" alt="Crystal 4">
+                  </div>
+                </div>
+
+                <div class="row mt-3 mx-0">
+                    <div class="col-md-4 bg-dark text-white">
+                       <p> Your total score is:</p> 
+                    </div>
+                </div>
+                <div class="row  mt-3 mx-0">
+                    <div class="col-md-4 bg-dark text-white"> 
+                       <p id="user_score">0</p>   
+                    </div>
+                </div>
+
+                </div>
+            </div>
+              
+          </div>
+
+        <script src="assets/javascript/themes.js"></script>
+        <script src="assets/javascript/game.js"></script>
+        <script src="" async defer></script>
+
+      </body>
+</html>
