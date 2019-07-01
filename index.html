@@ -17,6 +17,8 @@
         <!-- 
         <link rel="stylesheet" href="resets.css">
         --> 
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
@@ -65,26 +67,26 @@
                   </div>
                   <div class="col-md-3" id="stats_div">
                     <div class="row stats_div">
-                        <div id="wins_div" class="col-md-3">Wins:</div>
+                        <div id="wins_div" class="col-md-3">Wins :</div>
                       </div>
                       <div class="row stats_div">
-                        <div id="class_div" class="col-md-3">Losses:</div>
+                        <div id="losses_div" class="col-md-3">Losses :</div>
                       </div>
                   </div>
                 </div>
 
 
                 <div class="row mt-3 mx-0 bg-white">
-                  <div class="col-md-3  ">
+                  <div id="crystal1" class="col-md-3" value="1"> 
                     <img class=".img-fluid " src="./assets/images/crystal1.jpg" alt="Crystal 1">
                   </div>
-                  <div class="col-md-3">
+                  <div id="crystal2" class="col-md-3" value="2">
                       <img class=".img-fluid" src="./assets/images/crystal2.jpg" alt="Crystal 2">
                   </div>
-                  <div class="col-md-3">
+                  <div id="crystal3"  class="col-md-3" value="3">
                       <img class=".img-fluid" src="./assets/images/crystal3.jpg" alt="Crystal 3">
                   </div>
-                  <div class="col-md-3">
+                  <div id="crystal4"  class="col-md-3" value="4">
                       <img class=".img-fluid" src="./assets/images/crystal4.jpg" alt="Crystal 4">
                   </div>
                 </div>
@@ -105,7 +107,6 @@
               
           </div>
 
-        <script src="assets/javascript/themes.js"></script>
         <script src="assets/javascript/game.js"></script>
         <script src="" async defer></script>
 
