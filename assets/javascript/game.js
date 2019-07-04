@@ -2,11 +2,29 @@
 
  function UI() {
    this.updatePage = function() {
-    $("#score_span").text("Score="    + currentGame.randomNumber);
+
+    $("#score_span").text(currentGame.randomNumber);
     $("#wins_div").text("Wins : "     + currentGame.wins); 
     $("#losses_div").text("Losses : " + currentGame.losses); 
     $("#user_score").text(currentGame.userScore);
+    
+    if (currentGame.gameState == "ended") {
 
+      $("#message_div").show(); 
+
+      if (currentGame.userScore === currentGame.randomNumber) {
+        $("#message_div").attr("class","bg-info"); 
+        $("#message_div").text("You Won! Click any crystal to start a new game.");
+      }
+      else {
+        $("#message_div").attr("class","bg-danger");
+        $("#message_div").text("You lost! Click any crystal to start a new game.");
+      }
+    } 
+    else 
+    if (currentGame.gameState == "started") {
+      $("#message_div").hide(); 
+    }
    }
  }
 ///////////////////////////////////////////////////////////////////////////
@@ -53,7 +71,7 @@ function Game(theme) {
     //A crystal has been clicked on.  Increase the user's score by the amount
     //and check for game-ending condition.
     
-    if (this.gameState = "started") {
+    if (this.gameState === "started") {
 
       this.userScore += this.crystalValue[parseInt(crystalIndex)];
 
@@ -67,16 +85,14 @@ function Game(theme) {
         this.losses++;
         this.gameState = "ended";
       }
-
-      userInterface.updatePage(); 
-      
-      // //After game is over, click anywhere in the html body to restart game.
-      // var saveThis = this;
-      // $("body").keyup(function() {
-      //   saveThis.initGame();
-      // }); 
-
     }
+    else if (this.gameState === "ended") {
+      // If game ended, next click will start a new one.
+      this.initGame();
+    }
+
+    userInterface.updatePage(); 
+
   }
 
 } // End Of Game() constructor

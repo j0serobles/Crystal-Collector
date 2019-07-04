@@ -22,6 +22,7 @@ body {
 #heading-h1 {
     background-color: #c61;
     color: #fff; 
+    padding-bottom: 7px;
     /* height: 10%; */
 }
 
